@@ -1,13 +1,11 @@
 package com.toren.nobetcieczane.ui.adapter
 
 import android.annotation.SuppressLint
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.toren.nobetcieczane.databinding.PharmacyRowBinding
 import com.toren.nobetcieczane.data.model.Pharmacy
-import com.toren.nobetcieczane.data.model.PharmacyResponse
 
 class PharmacyAdapter(private val pharmacyList: MutableList<Pharmacy>) :
     RecyclerView.Adapter<PharmacyAdapter.ViewHolder>() {
@@ -23,8 +21,9 @@ class PharmacyAdapter(private val pharmacyList: MutableList<Pharmacy>) :
         return pharmacyList.size
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.pharmacyTw.text = pharmacyList[position].name
+        holder.binding.pharmacyTw.text = pharmacyList[position].name + " ECZANESI"
         holder.binding.adressTw.text = pharmacyList[position].address
         holder.binding.phoneTw.text = pharmacyList[position].phone
     }

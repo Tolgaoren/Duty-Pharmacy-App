@@ -49,7 +49,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -62,5 +61,7 @@ dependencies {
     implementation(libs.retrofit.converter)
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
-
+    implementation(libs.coroutines.android)
+    implementation(libs.coroutines.core)
+    implementation(libs.datastore.preferences)
 }
